@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {useState} from 'react'
 import Currency from 'react-currency-formatter'
 import {useDispatch, useSelector} from 'react-redux'
+import useLocalStorage from '../hooks/useLocalStorage'
 import {addToBasket,  removeFromBasket} from '../slices/basketSlice'
 function Checkout({id, title, price, description, category, image, hashPrime}) {
     const MAX_RATING = 5
@@ -10,6 +11,8 @@ function Checkout({id, title, price, description, category, image, hashPrime}) {
     const [rating] = useState(
         Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1) * MIN_RATING)
     )
+
+
     const dispatch = useDispatch()
     const AddToBasket = () => {
         const product = {
@@ -17,6 +20,7 @@ function Checkout({id, title, price, description, category, image, hashPrime}) {
         }
         dispatch(addToBasket(product))
     }
+ 
     const RemoveFromBasket = () => {
         dispatch(removeFromBasket({id}))
     }

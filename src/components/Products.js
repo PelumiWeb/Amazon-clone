@@ -4,6 +4,7 @@ import {StarIcon} from '@heroicons/react/solid'
 import Currency from 'react-currency-formatter'
 import {addToBasket} from '../slices/basketSlice'
 import {useDispatch} from 'react-redux'
+import useLocalStorage from '../hooks/useLocalStorage'
 
 function Products({id, title, price, description, category, image}) {
     const MAX_RATING = 5
@@ -14,12 +15,15 @@ function Products({id, title, price, description, category, image}) {
     const [hashPrime] = useState(Math.random() < 0.5)
     const dispatch = useDispatch()
 
+  
+
     const AddToBasket = () => {
         const product = {
             id, title, price, description, category, image, hashPrime
         }
         dispatch(addToBasket(product))
     }
+ 
 
     return (
         <div className='group relative flex flex-col m-5 bg-white z-30 p-10 rounded-lg cursor-pointer'>

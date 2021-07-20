@@ -30,7 +30,7 @@ const items = useSelector(selectItems)
                        <p>{session?.user ? `Hello ${session?.user.name}` : 'Sign in'}</p> 
                         <p className='font-extrabold md:text-sm'>Account & links</p>
                     </div>
-                    <div className='link'>
+                    <div className='link' onClick={() => router.push('/orders')}>
                         <p>Returns</p>
                         <p className='font-extrabold md:text-sm'>& links</p>
                     </div>
