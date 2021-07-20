@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "e-clone-965d6",
+  "private_key_id": "3a630cf644ef2d01b1e76e516f5d750e03c52b6a",
+  "private_key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoI",
+  "client_email": "firebase-adminsdk-mc23q@e-clone-965d6.iam.gserviceaccount.com",
+  "client_id": "115966001041637860228",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-mc23q%40e-clone-965d6.iam.gserviceaccount.com"
+}
